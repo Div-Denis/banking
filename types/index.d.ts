@@ -245,7 +245,7 @@ declare interface RightSidebarProps {
 }
 
 // 左侧边栏信息接口
-declare interface SiderbarProps {
+declare interface SidebarProps {
   user: User;
 }
 
