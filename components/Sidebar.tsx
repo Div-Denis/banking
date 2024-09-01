@@ -5,8 +5,9 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Footer from './Footer'
 
-const Sidebar = ({user}: SidebarProps) => {
+const Sidebar = ({ user }: SidebarProps) => {
 
     const pathname =usePathname()
 
@@ -19,8 +20,8 @@ const Sidebar = ({user}: SidebarProps) => {
             >
                 <Image 
                     src='/icons/logo.svg'
-                    width={42}
-                    height={42}
+                    width={34}
+                    height={34}
                     alt='Horizon logo'
                     className='size-[24px] max-xl:size-14'
                 />
@@ -66,7 +67,9 @@ const Sidebar = ({user}: SidebarProps) => {
             USER
         </nav>
 
-        FOOTER
+        {/* FOOTER */}
+        <Footer user={user} />
+        
     </section>
   )
 }

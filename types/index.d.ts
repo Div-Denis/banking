@@ -9,14 +9,14 @@ declare type SearchParamProps = {
 
 // 注册用户信息
 declare type SignUpParams = {
-  firstName: string;
-  lastName: string;
-  address1: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  dateOfBirth: string;
-  ssn: string;
+  firstName?: string;
+  lastName?: string;
+  address1?: string;
+  city?: string;
+  state?: string;
+  postalCode?: string;
+  dateOfBirth?: string;
+  ssn?: string;
   email: string;
   password: string;
 };
@@ -36,6 +36,7 @@ declare type User = {
   dwollaCustomerId: string;
   firstName: string;
   lastName: string;
+  name: string;
   address1: string;
   city: string;
   state: string;
@@ -235,6 +236,8 @@ declare interface TotlaBalanceBoxProps {
 // 页脚信息接口
 declare interface FooterProps {
   user: User;
+  // 添加状态
+  type?: 'mobile' | 'desktop'
 }
 
 // 右侧边栏信息接口
